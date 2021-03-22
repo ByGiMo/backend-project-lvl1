@@ -1,3 +1,10 @@
 #!/user/bin/env node
-//const chalk = require('chalk');
-console.log(('Welcome to the Brain Games!'))
+ 
+import {userName} from '../src/cli.js';
+const greeting = () => 'Welcome to the Brain Games!'
+//const  greeting = () => {
+//const name = userName();
+//console.log(`Hello, ${name}!`)
+//}
+console.log(greeting());
+export {greeting};
