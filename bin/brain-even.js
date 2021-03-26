@@ -1,13 +1,14 @@
-import chalk from 'chalk'
+//import chalk from 'chalk'
 import readlineSync from 'readline-sync';
-import {greeting} from 'brain-games.js'
+import {greeting} from 'brain-games.js';
+import {userName} from '../src/cli.js';
 const name = userName();
-console.log (chalk.green('Answer "yes" if number even otherwise answer "no".'));
+console.log ('Answer "yes" if number even otherwise answer "no".');
 const getRandom = (min, max) => {
   return Math.floor(Math.random()*(max-min))
   };
 
-const correct = chalk.green('Correct');
+const correct = 'Correct';
 const evenOrOddNumber = () => {
   let number = getRandom(1,100)
   const answer = readlineSync.question(`Question: ${number}\nYour answer:`);
@@ -16,13 +17,13 @@ const evenOrOddNumber = () => {
      }
     if (answer) {
       if (answer === 'yes') {
-      return chalk.red(answer +" is wrong answer.") + " Correct answer was no. ";
+      return answer +" is wrong answer." + " Correct answer was no. ";
       }
       else if (answer === 'no') {
-        return `${chalk.red(answer + ' is wrong answer.' )} Correct answer was yes`
+        return `${answer} + ' is wrong answer.'  Correct answer was yes`
       }
       else {
-        return chalk.red(`${answer} is wrong answer`)
+        return `${answer} is wrong answer`
         
       }
 }
