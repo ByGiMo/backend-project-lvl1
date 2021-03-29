@@ -2,6 +2,6 @@
 import {userName} from '../src/cli.js'
 const greeting = 'Welcome to the Brain Games!';
 console.log(greeting);
-const answerUserName = userName();
+export const answerUserName = userName();
 const helloUser= `Hello, ${answerUserName}!`;
 console.log(helloUser);
