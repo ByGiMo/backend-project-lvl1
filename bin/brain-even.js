@@ -12,6 +12,7 @@ const evenOrOddNumber = () => {
   let number = getRandom(1,100)
   const answer = readlineSync.question(`Question: ${number}\nYour answer:`);
      if (number%2 === 0 && 'yes'=== answer || number%2 !== 0 && 'no' === answer) {
+//	console.log(correct)
        return correct;
      }
     if (answer) {
@@ -21,25 +22,21 @@ const evenOrOddNumber = () => {
       else if (answer === 'no') {
         return `${answer} is wrong answer. Correct answer was yes`
       }
-      else {
-        return `${answer} is wrong answer`
-        
-      }
 }
 }
 const result = () => {  
 let i = 0;
    while(i<4){
 if (i===3){
-    return `Vongratulations ${greet.answerUserName}!`
+    return `Congratulations, ${greet.answerUserName}!`
     }
     let finishResult = (evenOrOddNumber())
     console.log(finishResult)
      if (finishResult!==correct) {
 break;
    }
-    i++;
+	i++;
     }
-    return `Let's try again ${greet.answerUserName}!`;
+    return `Let's try again, ${greet.answerUserName}!`;
     }
 console.log(result())
