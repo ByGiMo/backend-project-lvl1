@@ -1,8 +1,7 @@
-
 import readlineSync from 'readline-sync';
 import * as greet from './brain-games.js';
-//import {userName} from '../src/cli.js';
-console.log ('Answer "yes" if number even otherwise answer "no".');
+const evenOrOdd = 'Answer "yes" if number even otherwise answer "no".';
+console.log(evenOrOdd);
 const getRandom = (min, max) => {
   return Math.floor(Math.random()*(max-min))
   };
@@ -17,22 +16,24 @@ const evenOrOddNumber = () => {
      }
     if (answer) {
       if (answer === 'yes') {
-      return `${answer} is wrong answer ;(." + " Correct answer was no. "`;
+      return `${answer} is wrong answer ;(. Correct answer was 'no'. `;
       }
       else if (answer === 'no') {
-        return `${answer} is wrong answer. Correct answer was yes`
+        return `${answer} is wrong answer ;(. Correct answer was 'yes'.`;
       }
 }
 }
+const fin = () => evenOrOddNumber();
 const result = () => {  
 let i = 0;
    while(i<4){
 if (i===3){
     return `Congratulations, ${greet.answerUserName}!`
     }
+
     let finishResult = (evenOrOddNumber())
-    console.log(finishResult)
-     if (finishResult!==correct) {
+ console.log(finishResult)
+   if (finishResult !== correct) {
 break;
    }
 	i++;
